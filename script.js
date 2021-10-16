@@ -1,8 +1,8 @@
 // Task #1
-let value = prompt("Enter the value:", "");
-if (value > 0) {
+let value_1 = prompt("Enter the value:", "");
+if (value_1 > 0) {
     alert("+")
-} else if (value < 0) {
+} else if (value_1 < 0) {
     alert("-")
 } else {
     alert(0)
@@ -10,15 +10,22 @@ if (value > 0) {
 
 
 // Task #2
-let result;
+// let result;
 
-if (a + b < 4) {
-    result = "Few";
-} else {
-    result = "A lot of"
-}
+// if (a + b < 4) {
+//     result = "Few";
+// } else {
+//     result = "A lot of"
+// }
 
-let result = (a + b < 4) ? "Few" : "A lot of";
+// let result_same = (a + b < 4) ? "Few" : "A lot of";
 
 
 // Task #3
+let value_3 = prompt("Какое «официальное» название JavaScript?")
+
+if (value_3 == "ECMAScript") {
+    alert("Right!")
+} else {
+    alert("Do not know? ECMPAScript!")
+}
