@@ -30,3 +30,10 @@ if (value_3 == "ECMAScript", "ecmascript", "Ecmascript") {
 } else {
     alert("Do not know? ECMPAScript!")
 }
+
+
+// Task #4
+
+let message = (login == 'Сотрудник') ? "Привет" :
+    (login == 'Директор') ? "Здравствуйте" :
+        (login == '') ? "Нет логина" : '';
