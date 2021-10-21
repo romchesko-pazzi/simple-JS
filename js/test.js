@@ -34,15 +34,28 @@ if (login == "PAPICH" || login == "papich" || login == "Papich") {
     alert("Wrong login")
 }
 
-// Task 5 (numbers from 0 to 5)(with "while")
-let number = 0
+// Task 5 (numbers from 1 to 5)(with "while")
+let number = 1
 while (number <= 5) {
     console.log(number)
     number++
 }
 
-// Task 6 (numbers from 0 to 5)(with "for")
-let number = 0
+// Task 6 (numbers from 1 to 5)(with "for")
+let number = 1
 for (; number <= 5; number++) {
     console.log(number)
+}
+
+// Task 7 (numbers from 1 to 5)(with "«do…while»")
+let num = 1
+do {
+    console.log(num)
+    num++
+} while (num <= 5)
+
+// Task 8 (Print even numbers)
+for (let num = 2; num <= 10; num++) {
+    if (num % 2 == 0)
+        console.log(num)
 }
