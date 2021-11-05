@@ -59,3 +59,21 @@ for (let num = 2; num <= 10; num++) {
     if (num % 2 == 0)
         console.log(num)
 }
+
+// Task 9 (codewars)
+function greet(name) {
+    return `Hello, ${name} how are you doing today?`
+}
+
+console.log((greet("Roma")));
+
+// Task 10 (codewars)
+function lovefunc(flower1, flower2) {
+    if (flower1 % 2 == 0 && flower2 % 2 != 0) {
+        return true;
+    } else if (flower1 % 2 != 0 && flower2 % 2 == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
