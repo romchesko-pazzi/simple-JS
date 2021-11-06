@@ -6,10 +6,10 @@ let minus = document.getElementById("minus");
 let multiply = document.getElementById("multiply");
 let divide = document.getElementById("divide");
 
-plus.addEventListener("click", getSum);
-minus.addEventListener("click", getDifference);
-multiply.addEventListener("click", getMultiply);
-divide.addEventListener("click", getQuotient);
+plus.addEventListener("click", main);
+minus.addEventListener("click", main);
+multiply.addEventListener("click", main);
+divide.addEventListener("click", main);
 
 function getFirstUnputValue() {
     return firstInput.value;
@@ -19,24 +19,19 @@ function getSecondUnputValue() {
     return secondInput.value;
 }
 
-function getSum() {
-    let sum = +getFirstUnputValue() + +getSecondUnputValue();
-    console.log(sum.toFixed(1));
+function main(operation) {
+    let result;
+    operation = operation.srcElement.innerHTML;
+    if (operation === "+") {
+        result = +getFirstUnputValue() + +getSecondUnputValue();
+    } else if (operation === "-") {
+        result = getFirstUnputValue() - getSecondUnputValue();
+    } else if (operation === "*") {
+        result = getFirstUnputValue() * getSecondUnputValue();
+    } else if (operation === "/") {
+        result = getFirstUnputValue() / getSecondUnputValue();
+    } else {
+        console.log("Unknown operation")
+    }
+    console.log(result.toFixed(2));
 }
-
-function getDifference() {
-    let diff = getFirstUnputValue() - getSecondUnputValue();
-    console.log(diff);
-}
-
-function getMultiply() {
-    let mult = getFirstUnputValue() * getSecondUnputValue();
-    console.log(mult.toFixed(2));
-}
-
-function getQuotient() {
-    let quot = getFirstUnputValue() / getSecondUnputValue();
-    console.log(quot);
-}
-
-
