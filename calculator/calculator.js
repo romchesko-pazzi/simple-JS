@@ -1,41 +1,42 @@
-let plus = document.getElementById("button-plus");
-let minus = document.getElementById("button-minus");
-let multiply = document.getElementById("button-multiply");
-let divide = document.getElementById("button-divide");
+let firstInput = document.getElementById("numberOne");
+let secondInput = document.getElementById("numberTwo");
 
-let inputOne = document.getElementById("numberOne");
-let inputTwo = document.getElementById("numberTwo");
+let plus = document.getElementById("plus");
+let minus = document.getElementById("minus");
+let multiply = document.getElementById("multiply");
+let divide = document.getElementById("divide");
 
+plus.addEventListener("click", getSum);
+minus.addEventListener("click", getDifference);
+multiply.addEventListener("click", getMultiply);
+divide.addEventListener("click", getQuotient);
 
-function onButtonPlusClick() {
-    let sum = +getNumberOne() + +getNumberTwo();
-    console.log(sum);
+function getFirstUnputValue() {
+    return firstInput.value;
 }
 
-function onButtonMinusClick() {
-    let difference = getNumberOne() - getNumberTwo();
-    console.log(difference);
+function getSecondUnputValue() {
+    return secondInput.value;
 }
 
-function onButtonMultiplyClick() {
-    let mult = getNumberOne() * getNumberTwo();
-    console.log(mult);
+function getSum() {
+    let sum = +getFirstUnputValue() + +getSecondUnputValue();
+    console.log(sum.toFixed(1));
 }
 
-function onButtonDivideClick() {
-    let quotient = getNumberOne() / getNumberTwo();
-    console.log(quotient);
+function getDifference() {
+    let diff = getFirstUnputValue() - getSecondUnputValue();
+    console.log(diff);
 }
 
-function getNumberOne() {
-    return inputOne.value;
+function getMultiply() {
+    let mult = getFirstUnputValue() * getSecondUnputValue();
+    console.log(mult.toFixed(2));
 }
 
-function getNumberTwo() {
-    return inputTwo.value;
+function getQuotient() {
+    let quot = getFirstUnputValue() / getSecondUnputValue();
+    console.log(quot);
 }
 
-plus.addEventListener("click", onButtonPlusClick);
-minus.addEventListener("click", onButtonMinusClick);
-multiply.addEventListener("click", onButtonMultiplyClick);
-divide.addEventListener("click", onButtonDivideClick);
+
