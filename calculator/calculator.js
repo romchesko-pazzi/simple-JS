@@ -12,13 +12,13 @@ multiply.addEventListener("click", main);
 divide.addEventListener("click", main);
 
 function main(operation) {
-    let num1 = firstInput.value;
-    let num2 = secondInput.value;
+    let num1 = Number(firstInput.value);
+    let num2 = Number(secondInput.value);
 
     let result;
     operation = operation.srcElement.innerHTML;
     if (operation === "+") {
-        result = +num1 + +num2;
+        result = num1 + num2;
     } else if (operation === "-") {
         result = num1 - num2;
     } else if (operation === "*") {
