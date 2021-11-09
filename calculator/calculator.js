@@ -11,27 +11,22 @@ minus.addEventListener("click", main);
 multiply.addEventListener("click", main);
 divide.addEventListener("click", main);
 
-function getFirstUnputValue() {
-    return firstInput.value;
-}
-
-function getSecondUnputValue() {
-    return secondInput.value;
-}
-
 function main(operation) {
+    let num1 = firstInput.value;
+    let num2 = secondInput.value;
+
     let result;
     operation = operation.srcElement.innerHTML;
     if (operation === "+") {
-        result = +getFirstUnputValue() + +getSecondUnputValue();
+        result = +num1 + +num2;
     } else if (operation === "-") {
-        result = getFirstUnputValue() - getSecondUnputValue();
+        result = num1 - num2;
     } else if (operation === "*") {
-        result = getFirstUnputValue() * getSecondUnputValue();
+        result = num1 * num2;
     } else if (operation === "/") {
-        result = getFirstUnputValue() / getSecondUnputValue();
+        result = num1 / num2;
     } else {
-        console.log("Unknown operation")
+        console.log("Unknown operation");
     }
     console.log(result.toFixed(2));
 }
