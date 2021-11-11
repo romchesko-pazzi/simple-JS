@@ -12,16 +12,22 @@
 <body>
     <div class="calculator">
         <div class="input-first">
-            <input type="number" placeholder="Enter the first value" id="numberOne">
+            <input type="number" value="0.1" placeholder="Enter the first value" id="numberOne">
         </div>
         <div class="input-second">
-            <input type="number" placeholder="Enter the second value" id="numberTwo">
+            <input type="number" value="0.2" placeholder="Enter the second value" id="numberTwo">
         </div>
-        <div class="operation">
-            <button id="plus">+</button>
-            <button id="minus">-</button>
-            <button id="multiply">*</button>
-            <button id="divide">/</button>
+        <div class="select">
+            <select id="select-id">
+                <option>Choose the operation</option>
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+        </div>
+        <div class="calculate">
+            <input type="button" id="calc" onclick="main()" value="calculate">
         </div>
         <script src="calculator.js"></script>
 </body>

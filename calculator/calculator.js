@@ -1,32 +1,27 @@
-let firstInput = document.getElementById("numberOne");
-let secondInput = document.getElementById("numberTwo");
+let select = document.getElementById("select-id");
+let el = document.getElementById("calc");
 
-let plus = document.getElementById("plus");
-let minus = document.getElementById("minus");
-let multiply = document.getElementById("multiply");
-let divide = document.getElementById("divide");
-
-plus.addEventListener("click", main);
-minus.addEventListener("click", main);
-multiply.addEventListener("click", main);
-divide.addEventListener("click", main);
-
-function main(operation) {
-    let num1 = Number(firstInput.value);
-    let num2 = Number(secondInput.value);
-
+function main(selectedValue) {
+    let num1 = Number(document.getElementById("numberOne").value);
+    let num2 = Number(document.getElementById("numberTwo").value);
+    selectedValue = select.options[select.selectedIndex].value;
     let result;
-    operation = operation.srcElement.innerHTML;
-    if (operation === "+") {
+
+    if (selectedValue === "+") {
         result = num1 + num2;
-    } else if (operation === "-") {
+    } else if (selectedValue === "-") {
         result = num1 - num2;
-    } else if (operation === "*") {
+    } else if (selectedValue === "*") {
         result = num1 * num2;
-    } else if (operation === "/") {
-        result = num1 / num2;
+    } else if (selectedValue === "/") {
+        if (num1 === 0 || num2 === 0) {
+            console.log("NO");
+            return;
+        } else
+            result = num1 / num2;
+
     } else {
         console.log("Unknown operation");
     }
-    console.log(result.toFixed(2));
+    console.log(result.toFixed(1));
 }
