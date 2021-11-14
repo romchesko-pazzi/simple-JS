@@ -1,10 +1,10 @@
 let select = document.getElementById("select-id");
 let el = document.getElementById("calc");
 
-function main(selectedValue) {
+function main() {
     let num1 = Number(document.getElementById("numberOne").value);
     let num2 = Number(document.getElementById("numberTwo").value);
-    selectedValue = select.options[select.selectedIndex].value;
+    let selectedValue = select.options[select.selectedIndex].value;
     let result;
 
     if (selectedValue === "+") {
@@ -19,7 +19,6 @@ function main(selectedValue) {
             return;
         } else
             result = num1 / num2;
-
     } else {
         console.log("Unknown operation");
     }
