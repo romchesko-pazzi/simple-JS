@@ -64,7 +64,6 @@ for (let num = 2; num <= 10; num++) {
 function greet(name) {
     return `Hello, ${name} how are you doing today?`
 }
-
 console.log((greet("Roma")));
 
 // Task 10 (codewars)
@@ -76,4 +75,39 @@ function lovefunc(flower1, flower2) {
     } else {
         return false;
     }
+}
+
+// Task 11(simple calculator)
+let operationButtons = document.getElementsByClassName("operation-button");
+
+function main(operation) {
+    let number1 = Number(document.getElementById("num1").value);
+    let number2 = Number(document.getElementById("num2").value);
+    let result;
+    if (operation === "+") {
+        result = number1 + number2;
+    } else if (operation === "-") {
+        result = number1 - number2;
+    } else if (operation === "*") {
+        result = number1 * number2;
+    } else if (operation === "/") {
+        if (number1 === 0 || number2 == 0) {
+            console.log("No");
+            return;
+        } else {
+            result = number1 / number2;
+        }
+    } else {
+        console.log("Unknown operation");
+    }
+    console.log(result.toFixed(1));
+}
+
+function commonOperation(eventObject) {
+    let clickedElement = eventObject.currentTarget.innerHTML;
+    main(clickedElement);
+}
+
+for (let i = 0; i < operationButtons.length; i++){
+    operationButtons[i].addEventListener("click", commonOperation);
 }
