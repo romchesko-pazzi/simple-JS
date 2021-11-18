@@ -2,13 +2,13 @@ let buttonPrev = document.getElementById("prev-button");
 let buttonNext = document.getElementById("next-button");
 let imgId = document.getElementById("images-of-pngs");
 let currentIndex = 0;
+let arrayOfImages = [];
 
 // add click thing
 buttonPrev.addEventListener("click", pressPrevButton);
 buttonNext.addEventListener("click", pressNextButton);
 
 // add array of images
-let arrayOfImages = [];
 arrayOfImages.push("img/icons8-твиттер.svg");
 arrayOfImages.push("img/icons8-телеграмма-app.svg");
 arrayOfImages.push("img/icons8-whatsapp.svg");
@@ -19,7 +19,7 @@ imgId.src = arrayOfImages[currentIndex];
 // изначально кнопка prev недоступна
 buttonPrev.disabled = true;
 
-function pressPrevButton() {
+function pressPrevButton(event) {
     // текущий индекс массива -1
     currentIndex--;
     // переприсваивается путю картинки новый индекс(-1)
@@ -32,7 +32,7 @@ function pressPrevButton() {
     }
 }
 
-function pressNextButton() {
+function pressNextButton(event) {
     // текущий индекс массива +1
     currentIndex++;
     // переприсваивается путю картинки новый индекс(+1)
