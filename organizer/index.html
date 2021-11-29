@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="first-block">
+        <input type="number" max="31" placeholder="Введи день" id="inputOfSaved" class="savedInput"
+            onkeyup="if(parseInt(value) > 31){value = 31; return false; }"><br>
+        <textarea name="#" id="textarea" cols="30" rows="10"></textarea><br>
+        <button id="save-button">Сохранить</button>
+    </div>
+    <div class="second-shit">
+        <input type="number" max="31" placeholder="Введи день" id="inputOfShowed" class="showedInput"
+            onkeyup="if(parseInt(value) > 31){value = 31; return false; }"><br>
+        <button id="check-button">Show me my plans</button>
+    </div>
+    <script src="organizer.js"></script>
+</body>
+
+</html>

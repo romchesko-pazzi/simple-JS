@@ -1,0 +1,13 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.savedInput{
+    margin-bottom: 10px;
+}
+
+.showedInput{
+    margin: 100px 0px 10px 0px;
+}
