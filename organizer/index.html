@@ -10,14 +10,14 @@
 </head>
 
 <body>
-    <div class="first-block">
-        <input type="number" max="7" placeholder="Введи день" id="inputOfSaved" class="savedInput"
+    <div class="first-input-block">
+        <input type="number" max="7" placeholder="Введи день" id="valueOfEntered" class="enteredInput"
             onkeyup="if(parseInt(value) > 7 || parseInt(value) < 1){value = 7; return false; }"><br>
         <textarea name="#" id="textarea" cols="30" rows="10"></textarea><br>
         <button id="save-button">Сохранить</button>
     </div>
-    <div class="second-shit">
-        <input type="number" max="7" placeholder="Введи день" id="inputOfShowed" class="showedInput"
+    <div class="second-input-block">
+        <input type="number" max="7" placeholder="Введи день" id="valueOfChecked" class="checkedInput"
             onkeyup="if(parseInt(value) > 7 || parseInt(value) < 1){value = 7; return false; }"><br>
         <button id="check-button">Show me my plans</button>
     </div>

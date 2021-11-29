@@ -4,10 +4,10 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-.savedInput{
+.enteredInput{
     margin-bottom: 10px;
 }
 
-.showedInput{
+.checkedInput{
     margin: 100px 0px 10px 0px;
 }
