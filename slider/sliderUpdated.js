@@ -7,9 +7,14 @@ let slider = {
 
     // Запуск(инициализация)
     init: function () {
-        // add click thing
-        this.buttonPrev.addEventListener("click", this.pressPrevButton);
-        this.buttonNext.addEventListener("click", this.pressNextButton);
+        let that = this; // that === slider
+        this.buttonPrev.addEventListener("click", function (event) {
+            that.pressPrevButton(event);
+        });
+
+        this.buttonNext.addEventListener("click", function (event) {
+            that.pressNextButton(event);
+        });
 
         // add array of images
         this.arrayOfImages.push("img/icons8-твиттер.svg");
