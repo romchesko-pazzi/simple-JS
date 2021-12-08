@@ -1,23 +1,25 @@
-function Slider() {
-    this.buttonPrev = null;
-    this.buttonNext = null;
-    this.imgId = null;
-    this.currentIndex = 0;
-    this.arrayOfImages = [];
-    this.init = function (elId) {
-        let that = this; // that === slider
+class Slider {
+    buttonPrev = null;
+    buttonNext = null;
+    imgId = null;
+    currentIndex = 0;
+    arrayOfImages = [];
+
+
+    constructor(elId) {
         elId = document.querySelector("#" + elId);
+        // let that = this;
 
         this.buttonPrev = elId.querySelector(".prev-button");
         this.buttonNext = elId.querySelector(".next-button");
         this.imgId = elId.querySelector(".images-of-pngs");
 
         this.buttonPrev.addEventListener("click", function (event) {
-            that.pressPrevButton(event);
+            this.pressPrevButton(event);
         });
 
         this.buttonNext.addEventListener("click", function (event) {
-            that.pressNextButton(event);
+            this.pressNextButton(event);
         });
 
         // add array of images
@@ -30,8 +32,10 @@ function Slider() {
         this.imgId.src = this.arrayOfImages[this.currentIndex];
         // изначально кнопка prev недоступна
         this.buttonPrev.disabled = true;
-    };
-    this.pressPrevButton = function (event) {
+    }
+
+
+    pressPrevButton(event) {
         // текущий индекс массива -1
         this.currentIndex--;
         // переприсваивается путю картинки новый индекс(-1)
@@ -42,8 +46,9 @@ function Slider() {
         if (this.currentIndex === 0) {
             this.buttonPrev.disabled = true;
         }
-    };
-    this.pressNextButton = function (event) {
+    }
+
+    pressNextButton(event) {
         // текущий индекс массива +1
         this.currentIndex++;
         // переприсваивается путю картинки новый индекс(+1)

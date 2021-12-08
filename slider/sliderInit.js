@@ -1,5 +1,2 @@
-let slider1 = new Slider();
-let slider2 = new Slider();
-
-slider1.init("slider1");
-slider2.init("slider2");
+let slider1 = new Slider("slider1");
+let slider2 = new Slider("slider2");
