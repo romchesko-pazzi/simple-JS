@@ -1,5 +1,5 @@
-let slider1 = sliderFactory.createSlider();
-let slider2 = sliderFactory.createSlider();
+let slider1 = new Slider();
+let slider2 = new Slider();
 
 slider1.init("slider1");
 slider2.init("slider2");
